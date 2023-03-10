@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:kidobotics_app/src/features/authentication/screens/login_screen.dart';
+import 'package:kidobotics_app/src/features/authentication/screens/register_screen.dart';
+
+class Authenticaion extends StatefulWidget {
+  const Authenticaion({super.key});
+
+  @override
+  State<Authenticaion> createState() => _AuthenticaionState();
+}
+
+class _AuthenticaionState extends State<Authenticaion> {
+  // Initially show Login Page
+  bool showLogin = true;
+
+  // Toggle between Login and Sign Up
+  void toggleScreens() {
+    setState(() {
+      showLogin = !showLogin;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (showLogin) {
+      return const LoginScreen(
+          // showSignUp: toggleScreens,
+          );
+    } else {
+      return const RegisterScreen(
+          // showLogin: toggleScreens,
+          );
+    }
+  }
+}
