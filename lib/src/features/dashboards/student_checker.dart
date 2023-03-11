@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:kidobotics_app/src/constants/colors.dart';
-import 'package:kidobotics_app/src/features/dashboards/student_checker.dart';
 import 'package:kidobotics_app/src/features/dashboards/widgets/custom_large_container.dart';
 import 'package:kidobotics_app/src/utilities/app_large_text.dart';
 import 'package:kidobotics_app/src/utilities/app_text.dart';
 
-class DashboardCheck extends StatefulWidget {
-  const DashboardCheck({super.key});
+class StudentChecker extends StatelessWidget {
+  const StudentChecker({super.key});
 
-  static const String routeName = "dashboard_check";
+  static const String routeName = "student_checker";
 
-  @override
-  State<DashboardCheck> createState() => _DashboardCheckState();
-}
-
-class _DashboardCheckState extends State<DashboardCheck> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,9 +24,9 @@ class _DashboardCheckState extends State<DashboardCheck> {
               height: 100,
             ),
 
-            // Are you a ... text
+            // Are you ... text
             const AppLargeText(
-              text: "Are you a ...",
+              text: "Are you ...",
               color: AppColors.kBlueColor,
             ),
 
@@ -42,7 +36,7 @@ class _DashboardCheckState extends State<DashboardCheck> {
 
             // How do you want to use KidoBotics text
             const AppText(
-              text: "How do you want to use KidoBotics?",
+              text: "Let us help your experience better",
               color: AppColors.kSmallTextColor,
             ),
 
@@ -52,9 +46,9 @@ class _DashboardCheckState extends State<DashboardCheck> {
 
             // Teacher button container
             CustomLargeContainer(
-              text: "Teacher",
-              imageUrl: "assets/images/teacher.png",
-              color: AppColors.kBlueColor,
+              text: "New here",
+              imageUrl: "assets/images/student.png",
+              color: AppColors.kPurpleColor,
               onTap: () {},
             ),
 
@@ -64,12 +58,10 @@ class _DashboardCheckState extends State<DashboardCheck> {
 
             // Student button container
             CustomLargeContainer(
-              text: "Student",
-              imageUrl: "assets/images/student.png",
-              color: AppColors.kGreenColor,
-              onTap: () {
-                Navigator.pushNamed(context, StudentChecker.routeName);
-              },
+              text: "Already with us",
+              imageUrl: "assets/images/teacher.png",
+              color: AppColors.kYellowColor,
+              onTap: () {},
             ),
           ],
         ),

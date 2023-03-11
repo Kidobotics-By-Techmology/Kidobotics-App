@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kidobotics_app/src/constants/constants.dart';
+import 'package:kidobotics_app/src/constants/colors.dart';
 import 'package:kidobotics_app/src/models/onboarding_model.dart';
+import 'package:kidobotics_app/src/utilities/app_large_text.dart';
+import 'package:kidobotics_app/src/utilities/app_text.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class CustomPageViews extends StatelessWidget {
@@ -32,7 +34,7 @@ class CustomPageViews extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          color: kBlackColor,
+          color: AppColors.kBlackColor,
         ),
 
         Positioned(
@@ -73,26 +75,17 @@ class CustomPageViews extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      Text(
-                        title,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontFamily: 'Roboto',
-                          fontSize: 35.2,
-                          fontWeight: FontWeight.w400,
-                        ),
+                      AppLargeText(
+                        text: title,
+                        color: AppColors.kBlackTextColor,
+                        fontWeight: FontWeight.w400,
                       ),
                       const SizedBox(
                         height: 20,
                       ),
-                      Text(
-                        description,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 17.6,
-                          fontWeight: FontWeight.w400,
-                          color: kSmallTextColor,
-                        ),
+                      AppText(
+                        text: description,
+                        color: AppColors.kSmallTextColor,
                       ),
                     ],
                   ),
@@ -101,9 +94,9 @@ class CustomPageViews extends StatelessWidget {
                   SmoothPageIndicator(
                     controller: pageController,
                     count: onboardingPages.length,
-                    effect: ExpandingDotsEffect(
-                      dotColor: kSmallTextColor,
-                      activeDotColor: kLightGreenColor,
+                    effect: const ExpandingDotsEffect(
+                      dotColor: AppColors.kSmallTextColor,
+                      activeDotColor: AppColors.kLightGreenColor,
                       dotHeight: 10,
                       dotWidth: 10,
                       expansionFactor: 4,
@@ -116,9 +109,11 @@ class CustomPageViews extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             ElevatedButton(
-                              onPressed: isLastPage ? getStartedOnPressed : nextOnPressed,
+                              onPressed: isLastPage
+                                  ? getStartedOnPressed
+                                  : nextOnPressed,
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: kLightGreenColor,
+                                backgroundColor: AppColors.kLightGreenColor,
                                 padding: const EdgeInsets.symmetric(
                                   horizontal: 30,
                                   vertical: 15,
@@ -127,14 +122,10 @@ class CustomPageViews extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(5),
                                 ),
                               ),
-                              child: Text(
-                                isLastPage ? "Get Started" : "Next",
-                                style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w800,
-                                  fontSize: 16,
-                                  color: kWhiteTextColor,
-                                ),
+                              child: AppText(
+                                text: isLastPage ? "Get Started" : "Next",
+                                color: AppColors.kWhiteTextColor,
+                                fontWeight: FontWeight.w800,
                               ),
                             ),
                           ],
@@ -144,18 +135,19 @@ class CustomPageViews extends StatelessWidget {
                           children: [
                             TextButton(
                               onPressed: skipOnPressed,
-                              child: Text(
-                                "Skip",
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: kSmallTextColor,
-                                ),
+                              child: const AppText(
+                                text: 'Skip',
+                                fontSize: 14,
+                                color: AppColors.kSmallTextColor,
+                                fontWeight: FontWeight.w400,
                               ),
                             ),
                             ElevatedButton(
-                              onPressed: isLastPage ? getStartedOnPressed : nextOnPressed,
+                              onPressed: isLastPage
+                                  ? getStartedOnPressed
+                                  : nextOnPressed,
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: kLightGreenColor,
+                                backgroundColor: AppColors.kLightGreenColor,
                                 padding: const EdgeInsets.symmetric(
                                   horizontal: 30,
                                   vertical: 15,
@@ -164,14 +156,10 @@ class CustomPageViews extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(5),
                                 ),
                               ),
-                              child: Text(
-                                isLastPage ? "Get Started" : "Next",
-                                style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w800,
-                                  fontSize: 16,
-                                  color: kWhiteTextColor,
-                                ),
+                              child: AppText(
+                                text: isLastPage ? "Get Started" : "Next",
+                                color: AppColors.kWhiteTextColor,
+                                fontWeight: FontWeight.w800,
                               ),
                             ),
                           ],
