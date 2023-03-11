@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kidobotics_app/src/features/dashboards/dashboard_check.dart';
 import 'package:kidobotics_app/src/features/onboarding/widget/custom_pageviews.dart';
 import 'package:kidobotics_app/src/providers/onboarding_screens_manager.dart';
 import 'package:provider/provider.dart';
@@ -38,17 +37,13 @@ class OnboardingScreen extends StatelessWidget {
                   );
                 },
                 nextOnPressed: () {
-                  pageController.animateToPage(
-                    index + 1,
+                  pageController.nextPage(
                     duration: const Duration(milliseconds: 300),
                     curve: Curves.easeIn,
                   );
                 },
                 getStartedOnPressed: () {
-                  Navigator.pushNamed(
-                    context,
-                    DashboardCheck.routeName,
-                  );
+                  onboardingScreensManager.getStarted(context);
                 },
               );
             },

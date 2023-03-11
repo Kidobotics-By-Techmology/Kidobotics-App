@@ -32,41 +32,24 @@ class OnboardingScreensManager extends ChangeNotifier {
     notifyListeners();
   }
 
-  void nextPage(BuildContext context) {
+  nextPage(BuildContext context) {
     if (_currentPage < onboardingPages.length - 1) {
       _currentPage++;
       notifyListeners();
     }
   }
 
-  void skip() {
+  skip() {
     _currentPage = onboardingPages.length - 1;
     notifyListeners();
   }
 
   bool get isLastPage => _currentPage == onboardingPages.length - 1;
 
-  void nextOnPressed(BuildContext context) {
-    if (isLastPage) {
-      // Navigate to the next screen
-      Navigator.pushReplacementNamed(context, DashboardCheck.routeName);
-    } else {
-      // Navigate to the next page
-      nextPage(context);
-    }
+  void getStarted(BuildContext context) {
+    Navigator.pushNamed(
+      context,
+      DashboardCheck.routeName,
+    );
   }
-
-  // navigate to the next page or dashboard_check if isLastPage if not then use pageController to go to next onboarding screen
-  // void nextOnPressed(BuildContext context, PageController pageController) {
-  //   if (isLastPage == true) {
-  //     // Navigate to the next screen
-  //     Navigator.pushReplacementNamed(context, DashboardCheck.routeName);
-  //   } else {
-  //     // Navigate to the next page
-  //     pageController.nextPage(
-  //       duration: const Duration(milliseconds: 300),
-  //       curve: Curves.ease,
-  //     );
-  //   }
-  // }
 }
