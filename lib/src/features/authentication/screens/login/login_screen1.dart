@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kidobotics_app/src/constants/colors.dart';
 import 'package:kidobotics_app/src/features/authentication/screens/login/login_screen2.dart';
 import 'package:kidobotics_app/src/features/dashboards/widgets/custom_button.dart';
@@ -15,17 +16,14 @@ class LoginScreen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 30,
-          vertical: 50,
+        padding: const EdgeInsets.only(
+          left: 30,
+          right: 30,
+          top: 100,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 100,
-            ),
-
             // Log in text
             const AppLargeText(
               text: "Log in",
@@ -33,8 +31,8 @@ class LoginScreen1 extends StatelessWidget {
               color: AppColors.kLargeTextColor,
             ),
 
-            const SizedBox(
-              height: 60,
+            SizedBox(
+              height: Get.height * 0.10,
             ),
 
             // Image
@@ -50,8 +48,8 @@ class LoginScreen1 extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: Get.height * 0.05,
             ),
 
             // Phone Number TextFormField
@@ -63,8 +61,8 @@ class LoginScreen1 extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
             ),
 
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Get.height * 0.03,
             ),
 
             // Next Button
@@ -78,8 +76,8 @@ class LoginScreen1 extends StatelessWidget {
               },
             ),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: Get.height * 0.03,
             ),
 
             // OR
@@ -90,8 +88,8 @@ class LoginScreen1 extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: Get.height * 0.03,
             ),
 
             // Google Logo and Login with Google Text Button
@@ -107,8 +105,8 @@ class LoginScreen1 extends StatelessWidget {
               },
             ),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: Get.height * 0.03,
             ),
 
             // Don't have an account? Register text

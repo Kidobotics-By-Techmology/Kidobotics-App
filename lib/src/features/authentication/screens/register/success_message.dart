@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kidobotics_app/src/constants/colors.dart';
 import 'package:kidobotics_app/src/features/authentication/screens/login/login_screen1.dart';
 import 'package:kidobotics_app/src/features/dashboards/widgets/custom_button.dart';
@@ -14,17 +15,14 @@ class SuccessMessage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 30,
-          vertical: 50,
+        padding: const EdgeInsets.only(
+          left: 30,
+          right: 30,
+          top: 100,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 100,
-            ),
-
             // Can we have your number? text
             const AppLargeText(
               text: "Congrats!!!",
@@ -32,8 +30,8 @@ class SuccessMessage extends StatelessWidget {
               color: AppColors.kLargeTextColor,
             ),
 
-            const SizedBox(
-              height: 100,
+            SizedBox(
+              height: Get.height * 0.15,
             ),
 
             // Image
@@ -49,8 +47,8 @@ class SuccessMessage extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Get.height * 0.05,
             ),
 
             // Congratulations, your account has been registered, have fun using Kidobotics! text
@@ -60,8 +58,8 @@ class SuccessMessage extends StatelessWidget {
               color: AppColors.kSmallTextColor,
             ),
 
-            const SizedBox(
-              height: 100,
+            SizedBox(
+              height: Get.height * 0.1,
             ),
 
             // Next Button

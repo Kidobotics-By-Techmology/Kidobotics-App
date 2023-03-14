@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kidobotics_app/src/constants/colors.dart';
 import 'package:kidobotics_app/src/features/authentication/screens/register/success_message.dart';
 import 'package:kidobotics_app/src/features/dashboards/widgets/custom_button.dart';
@@ -17,17 +18,14 @@ class EmailConfirmationScreen extends StatelessWidget {
 
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 30,
-          vertical: 50,
+        padding: const EdgeInsets.only(
+          left: 30,
+          right: 30,
+          top: 100,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 100,
-            ),
-
             // Verify your account text
             const AppLargeText(
               text: "Verify your account",
@@ -35,8 +33,8 @@ class EmailConfirmationScreen extends StatelessWidget {
               color: AppColors.kLargeTextColor,
             ),
 
-            const SizedBox(
-              height: 70,
+            SizedBox(
+              height: Get.height * 0.10,
             ),
 
             // Image
@@ -52,8 +50,8 @@ class EmailConfirmationScreen extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: Get.height * 0.03,
             ),
 
             // A 4 digit code was sent to your email inbox, please check and confirm to continue text
@@ -63,8 +61,8 @@ class EmailConfirmationScreen extends StatelessWidget {
               color: AppColors.kSmallTextColor,
             ),
 
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Get.height * 0.05,
             ),
 
             // Name Field
@@ -75,8 +73,8 @@ class EmailConfirmationScreen extends StatelessWidget {
               prefixIcon: Icons.numbers,
             ),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: Get.height * 0.03,
             ),
 
             // Next Button
@@ -90,8 +88,8 @@ class EmailConfirmationScreen extends StatelessWidget {
               },
             ),
 
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Get.height * 0.05,
             ),
 
             // Didn't get a code? Resend

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kidobotics_app/src/constants/colors.dart';
 import 'package:kidobotics_app/src/features/authentication/screens/register/age_screen.dart';
 import 'package:kidobotics_app/src/features/dashboards/widgets/custom_button.dart';
@@ -17,25 +18,22 @@ class FullNameScreen extends StatelessWidget {
 
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 30,
-          vertical: 50,
+        padding: const EdgeInsets.only(
+          left: 30,
+          right: 30,
+          top: 100,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 100,
-            ),
-
             // What's your name? text
             const AppLargeText(
               text: "What's your name?",
               color: AppColors.kLargeTextColor,
             ),
 
-            const SizedBox(
-              height: 100,
+            SizedBox(
+              height: Get.height * 0.15,
             ),
 
             // Image
@@ -51,8 +49,8 @@ class FullNameScreen extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Get.height * 0.05,
             ),
 
             // Let's get to know each other! text
@@ -61,8 +59,8 @@ class FullNameScreen extends StatelessWidget {
               color: AppColors.kSmallTextColor,
             ),
 
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Get.height * 0.05,
             ),
 
             // Name Field
@@ -73,8 +71,8 @@ class FullNameScreen extends StatelessWidget {
               prefixIcon: Icons.person,
             ),
 
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Get.height * 0.05,
             ),
 
             // Next Button

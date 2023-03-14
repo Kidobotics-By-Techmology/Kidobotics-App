@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kidobotics_app/src/constants/colors.dart';
 import 'package:kidobotics_app/src/features/authentication/screens/register/email_confirmation.dart';
 import 'package:kidobotics_app/src/features/dashboards/widgets/custom_button.dart';
@@ -17,17 +18,14 @@ class EmailScreen extends StatelessWidget {
 
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 30,
-          vertical: 50,
+        padding: const EdgeInsets.only(
+          left: 30,
+          right: 30,
+          top: 100,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 100,
-            ),
-
             // What is your email? text
             const AppLargeText(
               text: "What is your email?",
@@ -35,8 +33,8 @@ class EmailScreen extends StatelessWidget {
               color: AppColors.kLargeTextColor,
             ),
 
-            const SizedBox(
-              height: 100,
+            SizedBox(
+              height: Get.height * 0.15,
             ),
 
             // Image
@@ -52,8 +50,8 @@ class EmailScreen extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Get.height * 0.05,
             ),
 
             // Stay connected with Kidobotics! text
@@ -62,8 +60,8 @@ class EmailScreen extends StatelessWidget {
               color: AppColors.kSmallTextColor,
             ),
 
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Get.height * 0.05,
             ),
 
             // Name Field
@@ -75,8 +73,8 @@ class EmailScreen extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
             ),
 
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: Get.height * 0.05,
             ),
 
             // Next Button

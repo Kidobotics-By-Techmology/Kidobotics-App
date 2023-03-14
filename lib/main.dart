@@ -9,7 +9,9 @@ import 'package:kidobotics_app/src/features/authentication/screens/register/succ
 import 'package:kidobotics_app/src/features/dashboards/dashboard_check.dart';
 import 'package:kidobotics_app/src/features/dashboards/student_checker.dart';
 import 'package:kidobotics_app/src/features/onboarding/screens/onboarding_screen.dart';
-import 'package:kidobotics_app/src/features/sales_showcase/sales_showcase.dart';
+import 'package:kidobotics_app/src/features/sales_showcase/screens/order.dart';
+import 'package:kidobotics_app/src/features/sales_showcase/screens/sales_showcase.dart';
+import 'package:kidobotics_app/src/features/sales_showcase/screens/select_mobot.dart';
 import 'package:kidobotics_app/src/providers/onboarding_screens_manager.dart';
 import 'package:provider/provider.dart';
 
@@ -53,6 +55,8 @@ class KidoboticsApp extends StatelessWidget {
           LoginScreen1.routeName: (context) => const LoginScreen1(),
           LoginScreen2.routeName: (context) => const LoginScreen2(),
           SalesShowcase.routeName: (context) => const SalesShowcase(),
+          SelectMobot.routeName:(context) => const SelectMobot(),
+          OrderMobot.routeName: (context) => const OrderMobot(),
         },
       ),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kidobotics_app/src/constants/colors.dart';
 import 'package:kidobotics_app/src/features/dashboards/widgets/custom_button.dart';
+import 'package:kidobotics_app/src/features/sales_showcase/screens/select_mobot.dart';
 import 'package:kidobotics_app/src/features/sales_showcase/widgets/custom_sales_products.dart';
 import 'package:kidobotics_app/src/services/local_services.dart';
 import 'package:kidobotics_app/src/utilities/app_large_text.dart';
@@ -33,7 +34,7 @@ class _SalesShowcaseState extends State<SalesShowcase> {
     _controller = YoutubePlayerController(
       initialVideoId: videoID!,
       flags: const YoutubePlayerFlags(
-        autoPlay: true,
+        autoPlay: false,
         mute: false,
       ),
     );
@@ -84,7 +85,7 @@ class _SalesShowcaseState extends State<SalesShowcase> {
                   ),
 
                   SizedBox(
-                    height: Get.height * 0.02,
+                    height: Get.height * 0.03,
                   ),
 
                   // Another Title
@@ -183,7 +184,9 @@ class _SalesShowcaseState extends State<SalesShowcase> {
                   CustomButton(
                     buttonText: 'Next',
                     color: AppColors.kPurpleColor,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, SelectMobot.routeName);
+                    },
                   ),
                 ],
               ),

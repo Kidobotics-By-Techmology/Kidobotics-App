@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kidobotics_app/src/constants/colors.dart';
 import 'package:kidobotics_app/src/features/dashboards/student_checker.dart';
 import 'package:kidobotics_app/src/features/dashboards/widgets/custom_large_container.dart';
@@ -19,25 +20,22 @@ class _DashboardCheckState extends State<DashboardCheck> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 30,
-          vertical: 50,
+        padding: const EdgeInsets.only(
+          left: 30,
+          right: 30,
+          top: 100,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: 100,
-            ),
-
             // Are you a ... text
             const AppLargeText(
               text: "Are you a ...",
               color: AppColors.kBlueColor,
             ),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: Get.height * 0.02,
             ),
 
             // How do you want to use KidoBotics text
@@ -46,8 +44,8 @@ class _DashboardCheckState extends State<DashboardCheck> {
               color: AppColors.kSmallTextColor,
             ),
 
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: Get.height * 0.05,
             ),
 
             // Teacher button container
@@ -58,8 +56,8 @@ class _DashboardCheckState extends State<DashboardCheck> {
               onTap: () {},
             ),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: Get.height * 0.02,
             ),
 
             // Student button container
